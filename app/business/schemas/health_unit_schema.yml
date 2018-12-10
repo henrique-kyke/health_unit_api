@@ -1,0 +1,13 @@
+# This schema file allwos to map a "FROM/TO" for severals data sources.
+# In this case we only use ubs, based in ubs.csv structure
+ubs:
+  vlr_latitude: latitude
+  vlr_longitude: longitude
+  nom_estab: name
+  dsc_endereco: address
+  dsc_cidade: city
+  dsc_telefone: phone
+  dsc_estrut_fisic_ambiencia: size
+  dsc_adap_defic_fisic_idosos: adaptation_for_seniors
+  dsc_equipamentos: medical_equipment
+  dsc_medicamentos: medicine
