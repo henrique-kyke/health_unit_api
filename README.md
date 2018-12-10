@@ -95,7 +95,7 @@ parameter | description | sample | required
 ------ | ------ | ------ |------
 query | a lat/long comma splited from where search calculate proximity | -6.57,-35.107 | true
 page | number of desired page (defaut = 1 if param omitted)| 5 | false
-per_page | quantity of entries to be show per page (defaut = 10 if param omitted)| 20 |
+per_page | quantity of entries to be show per page (defaut = 10 if param omitted)| 20 | false
 
 #### Response 200 (application/json)
 ```json
