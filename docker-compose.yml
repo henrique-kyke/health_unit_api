@@ -1,0 +1,15 @@
+version: '2'
+services:
+  health_unit_api:
+    image: '350051697926.dkr.ecr.us-east-1.amazonaws.com/health_unit_api:latest'
+    ports:
+      - "80:80"
+    command: bundle exec unicorn -c config/unicorn.rb -E production
+    environment:
+      - SECRET_KEY_BASE=f6db7a6bed7606099fb4b7c5b082e42f2982c04dfa7c6b9d51a6e9dc76c6dca81cf24747ce9bc9ab6ecc767c59923cd908b6c26d9f9a36516fb75dff094553e8
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: health_unit_api
+        awslogs-region: us-east-1
+        awslogs-stream-prefix: app

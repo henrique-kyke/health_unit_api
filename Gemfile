@@ -10,11 +10,6 @@ gem 'mongoid'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'figaro'
-gem 'geocoder'
-gem 'newrelic_rpm'
-gem 'rollbar'
-gem 'sidekiq'
-
 
 # gem 'abstract_bundle', git: 'http://ci.kanamobi.com.br/douglas.rossignolli/abstract_bundle.git'
 gem 'exceptions-resource', github: 'xdougx/exceptions-resource', require: 'exceptions'
