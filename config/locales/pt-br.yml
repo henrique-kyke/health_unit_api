@@ -1,0 +1,330 @@
+pt-br:
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      exists: "não existe"
+      not_found: "não encontrado"
+      password_facebook: "Senha ou Facebook Id deve ser preenchido"
+      image_blank: deve ser selecionada
+      have_one: deve ter pelo menos um
+      accepted: deve ser aceito
+      required: é obrigatório
+      select: deve ser selecionado
+      select_plural: devem ser selecionados
+      blank: não pode ficar em branco
+      present: deve ficar em branco
+      confirmation: não é igual a %{attribute}
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+      even: deve ser par
+      exclusion: não está disponível
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      inclusion: não está incluído na lista
+      invalid: não é válido
+      wrong_match: não confere
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      not_a_number: não é um número
+      not_an_integer: não é um número inteiro
+      odd: deve ser ímpar
+      record_invalid: 'A validação falhou: %{errors}'
+      older: deve ser maior de 18 anos
+      date_less_then: não pode ser menor que a data inicio
+      restrict_dependent_destroy:
+        one: "Não é possível excluir o registro pois existe um %{record} dependente"
+        many: "Não é possível excluir o registro pois existem %{record} dependentes"
+      taken: já está em uso
+      too_long: "é muito longo (máximo: %{count} caracteres)"
+      too_short: "é muito curto (mínimo: %{count} caracteres)"
+      wrong_length: "não possui o tamanho esperado (%{count} caracteres)"
+    template:
+      body: "Por favor, verifique o(s) seguinte(s) campo(s)"
+      header:
+        one: "Não foi possível gravar %{model}: 1 erro"
+        other: "Não foi possível gravar %{model}: %{count} erros."
+    auth:
+      not_exists: "não confere"
+  date:
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda
+    - Terça
+    - Quarta
+    - Quinta
+    - Sexta
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    formats:
+      default: "%d/%m/%Y"
+      default2: "%a, %d %b %Y %H:%M:%S %z"
+    distance_in_words:
+      about_x_hours:
+        one: ± 1 hora
+        other: ± %{count} horas
+      about_x_months:
+        one: ± 1 mês
+        other: ± %{count} meses
+      about_x_years:
+        one: ± 1 ano
+        other: ± %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_days:
+        one: 1 dia
+        other: '%{count} dias'
+      x_minutes:
+        one: 1 minuto
+        other: '%{count} minutos'
+      x_months:
+        one: 1 mês
+        other: '%{count} meses'
+      x_seconds:
+        one: 1 segundo
+        other: '%{count} segundos'
+    prompts:
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      month: Mês
+      second: Segundo
+      year: Ano
+  time:
+    formats:
+      default2: "%a, %d %b %Y %H:%M:%S %z"
+      check_in: "%a, %d %b %Y %H:%M:%S"
+      member_since: "Membro desde %B de %Y"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+      log_time: "%d %B %H:%M"
+      comment: "%d de %B de %Y às %T"
+      dates: "%d/%m/%Y - %H:%M"
+      period: "%d/%m/%Y %H:%M"
+      mail_expire_date: "%d de %B de %Y"
+      default: "%d/%m/%Y"
+    am: "am"
+    pm: "pm"
+  number:
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: ","
+      # Delimits thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: ""
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 2
+      # If set to true, precision will mean the number of significant digits instead
+      # of the number of decimal digits (1234 with precision 2 becomes 1200, 1.23543 becomes 1.2)
+      significant: false
+      # If set, the zeros after the decimal separator will always be stripped (eg.: 1.200 will be 1.2)
+      strip_insignificant_zeros: false
+
+    # Used in NumberHelper.number_to_currency()
+    currency:
+      format:
+        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
+        format: "%u%n"
+        unit: ""
+        # These five are to override number.format and are optional
+        separator: ","
+        delimiter: "."
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+
+    # Used in NumberHelper.number_to_percentage()
+    percentage:
+      format:
+        # These five are to override number.format and are optional
+        separator: ","
+        delimiter: "."
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+        format: "n%"
+        format2: "%n%"
+    # Used in NumberHelper.number_to_rounded()
+    precision:
+      format:
+        # These five are to override number.format and are optional
+        separator: ","
+        delimiter: "."
+        # precision:
+        significant: false
+        strip_insignificant_zeros: false
+    # Used in NumberHelper.number_to_human_size() and NumberHelper.number_to_human()
+    human:
+      format:
+        # These five are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      # Used in number_to_human_size()
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # Used in NumberHelper.number_to_human()
+      decimal_units:
+        format: "%n %u"
+        # Decimal units output formatting
+        # By default we will only quantify some of the exponents
+        # but the commented ones might be defined or overridden
+        # by the user.
+        units:
+          # femto: Quadrillionth
+          # pico: Trillionth
+          # nano: Billionth
+          # micro: Millionth
+          # mili: Thousandth
+          # centi: Hundredth
+          # deci: Tenth
+          unit: ""
+          # ten:
+          #   one: Ten
+          #   other: Tens
+          hundred: cem
+          thousand: mil
+          million: milhão
+          billion: bilhão
+          trillion: trilhão
+          quadrillion: quadrilhão
+  exceptions:
+    greather_then_today: "não pode ser maior que hoje"
+    file_exists: "já existe"
+    status_not_found: "status inválido, status válidos são %{statuses}"
+    refound_event_date: "já passou do prazo de um ano"
+    favorited: "ja é favorito"
+    participation: "ja está participando"
+    auth:
+      invalid: "e/ou senha incorreto(s)"
+      invalid_login: "Login e/ou senha incorreto(s)"
+      invalid_recover_password: "não encontrado."
+      invalid_cpf: "não encontrado. Consulte o envio do seu cadastro junto ao RH da sua empresa."
+      token: "não é válido"
+      inactive: "não está ativo."
+      exists: "não existe"
+      not_exists: "de usuário não encontrado."
+      expired_recover_code: "expirado. Tente recuperar senha novamente."
+      invalid_recover_code: "não é válido."
+    blank: "deve ser preenchido"
+    already_registered: "já existe."
+    exists: "não existe"
+    id_not_found: "não foi encontrado com o id"
+    invalid_builder: "o builder nao existe"
+    invalid_column: "coluna nao encontrada"
+    invalid_email: "não está valido"
+    hirer_not_found: "não existe"
+    auth_not_found: "não existe"
+    kind:
+      not_found: "Modelo não encontrado, os tipos válidos são %{kinds}"
+    model_not_found: "não é válido ou não está disponível nesse recurso"
+    not_found: "não encontrado"
+    routing_error: "This resources not exists or is not avaliable. Check if you send the right method (GET, POST, PUT, DELETE) and the url."
+    status:
+      not_found: "não encontrado, status disponíveis %{statuses}"
+    unauthorized: "acesso nao autorizado"
+  states:
+    Acre: AC
+    Alagoas: AL
+    Amapá: AP
+    Amazonas: AM
+    Bahia: BA
+    Ceará: CE
+    Distrito Federal: DF
+    Espírito Santo: ES
+    Goiás: GO
+    Maranhão: MA
+    Mato Grosso: MT
+    Mato Grosso do Sul: MS
+    Minas Gerais: MG
+    Pará: PA
+    Paraíba: PB
+    Paraná: PR
+    Pernambuco: PE
+    Piauí: PI
+    Rio de Janeiro: RJ
+    Rio Grande do Norte: RN
+    Rio Grande do Sul: RS
+    Rondônia : RO
+    Roraima: RR
+    Santa Catarina : SC
+    São Paulo: SP
+    Sergipe: SE
+    Tocantins: TO
+    Todos: Estados
+  messages:
+    password_updated: "Senha atualizada com sucesso"
+    new_password_mail: "Um código de confirmação foi enviado para o seu email %{email}"
+    new_password_sms: "Um código de confirmação foi enviado o seu telefone de final %{phone}"
+    change_address: "Dentro de %{days} dias úteis o seu endereço será atualizado."
+    confirmation_code_sms: "Seu código de confirmação de criação de conta é: %{recover_code}."
+    recover_code_sms: "Seu código de confirmação de recuperação de senha é: %{recover_code}."
+  will_paginate:
+    page_gap: "..."
+    previous_label: "<"
+    next_label: ">"
