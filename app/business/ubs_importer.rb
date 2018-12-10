@@ -21,7 +21,8 @@ class UbsImporter
   def import
     data.each do |hash|
       params = transform(hash)
-      HealthUnit.create(params)
+      unit = HealthUnit.create(params)
+      unit.reindex
     end
   end
 
