@@ -23,35 +23,26 @@ gem 'exceptions-resource', github: 'xdougx/exceptions-resource', require: 'excep
 gem 'aws-sdk'
 gem 'faraday_middleware-aws-signers-v4'
 gem 'searchkick'
-gem 'byebug'
 
-group :staging, :homologation, :producion do
+group :production do
   gem 'unicorn'
   gem 'unicorn-worker-killer'
-  gem 'wkhtmltopdf-heroku', github: 'camdez/wkhtmltopdf-heroku'
 end
 
 gem 'rack-cors'
 
-group :development, :test, :staging do
+group :development, :test do
+  gem 'byebug'
   gem 'listen'
   gem 'awesome_print'
-  gem 'cpf_faker'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails', github: 'rspec/rspec-rails'
+  gem 'pry-rails'
 end
 
 group :development do
-  gem 'brakeman', require: false
-  gem 'pry-rails'
-  gem 'rails-erd'
-  gem 'railroady'
-  gem 'rubocop', require: false
-  gem 'rubycritic', require: false
   gem 'thin'
-  gem 'web-console'
-  gem 'wkhtmltopdf-binary'
 end
 
 group :test do
@@ -60,9 +51,7 @@ group :test do
   # gem 'mongoid-rspec'
   gem 'shoulda-matchers', '~> 3.1.2'
 
-  # rspec
-  %w[rspec rspec-core rspec-mocks rspec-support
-     rspec-its rspec-expectations].each do |repo|
-    gem repo, github: "rspec/#{repo}", branch: :master
+  %w[rspec-core rspec-expectations rspec-mocks rspec-support].each do |lib|
+    gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
   end
 end
