@@ -1,4 +1,4 @@
-class Api::VersionOne::HealthUnitSerializer < ActiveModel::Serializer
+class HealthUnitSerializer < ActiveModel::Serializer
   attributes :id, :name, :address, :city, :phone, :geocode, :scores
 
   def id

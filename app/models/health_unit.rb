@@ -4,6 +4,15 @@ class HealthUnit
   include Serializable
   include Attributes
 
+  searchkick locations: [:geocode]
+
+  def search_data
+    {
+      id: id.to_s,
+      geocode: geocode
+    }
+  end
+
   field :name, type: String
   field :address, type: String
   field :city, type: String

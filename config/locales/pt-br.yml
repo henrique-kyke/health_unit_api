@@ -254,6 +254,7 @@ pt-br:
           trillion: trilhão
           quadrillion: quadrilhão
   exceptions:
+    no_location: "precisa ser informada"
     greather_then_today: "não pode ser maior que hoje"
     file_exists: "já existe"
     status_not_found: "status inválido, status válidos são %{statuses}"
